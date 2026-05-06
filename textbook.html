@@ -10,8 +10,7 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="format-detection" content="telephone=no">
-<title>ボクシング教科書 | ONE-BALANCE</title>
-<link rel="apple-touch-icon" href="icons/icon-192x192.png">
+<title>ONE-BALANCE ボクシング教科書</title>
 <style>
 :root{
   --red:#DB444C;--red-dark:#C0392B;--red-light:#fff0f0;--red-pale:#fff8f8;
@@ -27,22 +26,17 @@
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;overflow-x:hidden;}
 
-/* ===== レイアウト ===== */
 .wrap{max-width:1400px;margin:0 auto;display:flex;min-height:100vh;}
 
-/* PC：左サイド目次 */
 .sidebar{display:none;}
 @media(min-width:1024px){
   .sidebar{display:block;width:280px;background:var(--white);border-right:1px solid #eee;position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 20px;flex-shrink:0;}
   .main{flex:1;min-width:0;}
 }
-@media(max-width:1023px){
-  .main{width:100%;}
-}
+@media(max-width:1023px){.main{width:100%;}}
 
 .sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid var(--red);}
-.sidebar-logo-img{width:36px;height:36px;border-radius:50%;object-fit:cover;}
-.sidebar-logo-txt{font-size:13px;font-weight:700;color:var(--red);letter-spacing:1px;}
+.sidebar-logo img{max-width:100%;max-height:50px;object-fit:contain;}
 .sidebar-title{font-size:11px;color:var(--text2);letter-spacing:2px;margin-bottom:8px;}
 .sidebar-nav{list-style:none;}
 .sidebar-nav li{margin-bottom:2px;}
@@ -53,38 +47,30 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .sidebar-nav .num.g{background:var(--gold);}
 .sidebar-back{display:block;margin-top:24px;padding:10px;text-align:center;background:#f5f5f5;border-radius:var(--r-sm);color:var(--text2);text-decoration:none;font-size:11px;font-weight:600;}
 
-/* ===== モバイルヘッダー ===== */
-.mb-header{position:sticky;top:0;background:var(--red);color:white;padding:12px 16px;z-index:100;display:flex;align-items:center;gap:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.mb-header{position:sticky;top:0;background:var(--red);color:white;padding:10px 16px;z-index:100;display:flex;align-items:center;gap:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
 @media(min-width:1024px){.mb-header{display:none;}}
-.mb-logo{width:36px;height:36px;background:white;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.mb-logo img{width:100%;height:100%;object-fit:cover;}
-.mb-title{font-size:14px;font-weight:700;}
-.mb-sub{font-size:9px;opacity:0.85;letter-spacing:1px;}
+.mb-header img{height:36px;width:auto;max-width:140px;object-fit:contain;background:white;padding:3px 6px;border-radius:6px;}
+.mb-title{font-size:13px;font-weight:700;flex:1;}
 .mb-menu{margin-left:auto;background:rgba(255,255,255,0.2);border:none;color:white;padding:8px 12px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;}
 
-/* モバイル目次（オーバーレイ） */
 .mb-toc{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;justify-content:center;align-items:flex-start;padding-top:60px;}
 .mb-toc.open{display:flex;}
 .mb-toc-inner{background:white;width:90%;max-width:400px;max-height:80vh;overflow-y:auto;border-radius:var(--r);padding:20px;}
 .mb-toc-close{float:right;background:none;border:none;font-size:20px;cursor:pointer;color:var(--text2);}
 
-/* ===== メインコンテンツ ===== */
 .main{padding:0 16px 80px;}
 @media(min-width:768px){.main{padding:0 32px 80px;}}
 @media(min-width:1024px){.main{padding:0 40px 80px;}}
 
-/* ===== 表紙 ===== */
 .cover{background:var(--red);color:white;border-radius:var(--r);padding:40px 24px;margin:20px 0;position:relative;overflow:hidden;text-align:center;}
 .cover::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(255,255,255,0.08);border-radius:50%;}
 .cover-vol{display:inline-block;background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:12px;font-size:10px;font-weight:700;letter-spacing:2px;margin-bottom:16px;}
-.cover-logo{width:64px;height:64px;background:white;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--red);overflow:hidden;}
-.cover-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
-.cover-brand{font-size:11px;letter-spacing:3px;opacity:0.9;margin-bottom:8px;}
-.cover-ttl{font-size:clamp(22px,6vw,32px);font-weight:800;line-height:1.4;margin-bottom:12px;}
-.cover-sub{font-size:clamp(11px,3vw,13px);opacity:0.9;line-height:1.8;margin-bottom:24px;}
-.cover-foot{padding-top:16px;border-top:1px solid rgba(255,255,255,0.3);font-size:10px;opacity:0.8;letter-spacing:1px;}
+.cover-logo{background:white;border-radius:var(--r);padding:16px 20px;margin:0 auto 24px;max-width:280px;}
+.cover-logo img{max-width:100%;height:auto;display:block;}
+.cover-ttl{font-size:clamp(22px,6vw,32px);font-weight:800;line-height:1.4;margin-bottom:12px;position:relative;z-index:2;}
+.cover-sub{font-size:clamp(11px,3vw,13px);opacity:0.9;line-height:1.8;margin-bottom:24px;position:relative;z-index:2;}
+.cover-foot{padding-top:16px;border-top:1px solid rgba(255,255,255,0.3);font-size:10px;opacity:0.8;letter-spacing:1px;position:relative;z-index:2;}
 
-/* ===== 章扉 ===== */
 .chapter{background:white;border-radius:var(--r);padding:24px 20px;margin-bottom:20px;}
 @media(min-width:768px){.chapter{padding:32px 28px;}}
 .ch-num{display:inline-flex;align-items:center;background:var(--red);color:white;padding:4px 12px;border-radius:6px;font-size:10px;font-weight:700;letter-spacing:2px;margin-bottom:12px;}
@@ -96,7 +82,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .ch-line.b{background:var(--blue);}
 .ch-line.g{background:var(--gold);}
 
-/* ===== 目次 ===== */
 .toc-grid{display:grid;gap:8px;}
 .toc-item{display:flex;align-items:center;padding:14px;background:var(--bg);border-radius:var(--r-sm);text-decoration:none;color:var(--text);transition:transform .15s;}
 .toc-item:hover,.toc-item:active{transform:translateX(4px);}
@@ -108,19 +93,39 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .toc-desc{font-size:11px;color:var(--text2);}
 .toc-arrow{font-size:14px;color:var(--text3);margin-left:8px;}
 
-/* ===== 本文セクション ===== */
 .section{margin-bottom:24px;}
 .section h3{font-size:16px;font-weight:700;color:var(--red);margin-bottom:12px;padding-left:12px;border-left:3px solid var(--red);}
 .section h3.b{color:var(--blue);border-left-color:var(--blue);}
 .section h3.g{color:var(--gold);border-left-color:var(--gold);}
 .section p{font-size:14px;line-height:2;color:#333;margin-bottom:12px;}
 
+/* 代表プロフィール */
+.profile{display:flex;flex-direction:column;align-items:center;background:linear-gradient(135deg,var(--red-pale),#fff);padding:24px 20px;border-radius:var(--r);margin-bottom:20px;border:1px solid #fdd;}
+@media(min-width:600px){.profile{flex-direction:row;gap:24px;text-align:left;align-items:flex-start;}}
+.profile-photo{width:140px;height:180px;border-radius:var(--r);overflow:hidden;background:#eee;flex-shrink:0;margin-bottom:16px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+@media(min-width:600px){.profile-photo{margin-bottom:0;}}
+.profile-photo img{width:100%;height:100%;object-fit:cover;}
+.profile-info{flex:1;text-align:center;}
+@media(min-width:600px){.profile-info{text-align:left;}}
+.profile-role{font-size:10px;color:var(--red);background:white;display:inline-block;padding:3px 10px;border-radius:12px;font-weight:700;letter-spacing:1px;margin-bottom:8px;border:1px solid var(--red);}
+.profile-name{font-size:22px;font-weight:800;color:var(--text);margin-bottom:4px;}
+.profile-name-en{font-size:11px;color:var(--text2);letter-spacing:2px;margin-bottom:12px;}
+.profile-bio{font-size:13px;color:#444;line-height:1.9;}
+
+/* 実績一覧 */
+.records{margin-top:16px;}
+.records-ttl{font-size:13px;font-weight:800;color:var(--red);margin-bottom:10px;text-align:center;letter-spacing:2px;}
+.records-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+@media(min-width:600px){.records-grid{grid-template-columns:repeat(3,1fr);}}
+.record{background:var(--gold-light);border-radius:var(--r-sm);padding:10px 12px;border:1px solid #fde7a8;}
+.record-year{font-size:14px;font-weight:800;color:var(--red);margin-bottom:4px;}
+.record-name{font-size:11px;line-height:1.5;color:#333;font-weight:600;}
+
 /* 引用ブロック（手紙風） */
 .letter{background:var(--red-pale);border-left:4px solid var(--red);padding:18px 20px;margin:16px 0;border-radius:0 var(--r-sm) var(--r-sm) 0;}
 .letter p{font-family:var(--serif);font-size:14px;line-height:2;color:#333;margin:0;}
 .letter-sign{text-align:right;margin-top:16px;font-family:var(--serif);font-size:13px;color:var(--red);font-weight:700;}
 
-/* ボックス */
 .box{background:var(--blue-pale);border:1px solid var(--blue-light);border-radius:var(--r-sm);padding:14px 16px;margin:12px 0;}
 .box-ttl{font-size:12px;font-weight:700;color:var(--blue);margin-bottom:8px;letter-spacing:1px;}
 .box p,.box li{font-size:13px;line-height:1.9;}
@@ -130,35 +135,45 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .box.g .box-ttl{color:#a87810;}
 .box ul{margin-left:18px;}
 
-/* チェックリスト */
+/* メーター付きチェックリスト */
+.meter-card{background:white;border:2px solid var(--red);border-radius:var(--r);padding:18px;margin-bottom:16px;position:sticky;top:60px;z-index:50;}
+@media(min-width:1024px){.meter-card{top:20px;}}
+.meter-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.meter-label{font-size:11px;font-weight:800;color:var(--text2);letter-spacing:1px;}
+.meter-pct{font-size:24px;font-weight:900;color:var(--red);}
+.meter-bar{background:#f0f0f0;border-radius:10px;height:14px;overflow:hidden;position:relative;}
+.meter-fill{background:linear-gradient(90deg,var(--red),var(--gold),var(--green));height:100%;transition:width 0.4s ease;border-radius:10px;}
+.meter-status{font-size:11px;font-weight:700;margin-top:8px;text-align:center;}
+.meter-status.ng{color:var(--red);}
+.meter-status.ok{color:var(--green);}
+.meter-target{position:absolute;left:70%;top:-2px;bottom:-2px;width:2px;background:var(--green);}
+.meter-target::after{content:'70%';position:absolute;top:-15px;left:-12px;font-size:9px;color:var(--green);font-weight:800;}
+
 .checklist{list-style:none;}
-.checklist li{padding:10px 12px;background:white;border:1px solid #eee;border-radius:var(--r-sm);margin-bottom:6px;display:flex;align-items:center;gap:10px;cursor:pointer;font-size:13px;transition:all .15s;}
+.checklist li{padding:14px 16px;background:white;border:1.5px solid #eee;border-radius:var(--r-sm);margin-bottom:8px;display:flex;align-items:center;gap:12px;cursor:pointer;font-size:13px;transition:all .15s;line-height:1.6;}
 .checklist li:hover{border-color:var(--red);}
-.checklist li.checked{background:var(--red-pale);border-color:var(--red);}
-.check-mark{width:20px;height:20px;border:2px solid #ddd;border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:transparent;}
-.checklist li.checked .check-mark{background:var(--red);border-color:var(--red);color:white;}
+.cl-status{display:flex;gap:4px;flex-shrink:0;}
+.cl-btn{width:32px;height:32px;border-radius:50%;border:2px solid #ddd;background:white;font-size:14px;font-weight:900;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;color:#bbb;}
+.cl-btn.active.x{background:var(--red);border-color:var(--red);color:white;}
+.cl-btn.active.t{background:var(--gold);border-color:var(--gold);color:white;}
+.cl-btn.active.o{background:var(--green);border-color:var(--green);color:white;}
+.cl-text{flex:1;font-weight:600;color:var(--text);}
 
-/* 動画リンクカード */
-.video-card{background:#1c1c1e;border-radius:var(--r-sm);padding:14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;cursor:pointer;text-decoration:none;color:white;transition:transform .15s;}
-.video-card:hover,.video-card:active{transform:translateY(-2px);}
-.video-play{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.video-play::after{content:'';display:block;width:0;height:0;border-left:10px solid white;border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px;}
-.video-info{flex:1;min-width:0;}
-.video-name{font-size:13px;font-weight:600;margin-bottom:2px;}
-.video-sub{font-size:10px;opacity:0.6;}
-.video-arrow{font-size:16px;opacity:0.6;flex-shrink:0;}
-
-/* サムネイル付き動画 */
-.video-thumb{display:flex;align-items:center;gap:10px;background:white;border:1px solid #eee;border-radius:var(--r-sm);padding:10px;margin-bottom:6px;text-decoration:none;color:var(--text);}
-.video-thumb img{width:100px;height:75px;object-fit:cover;border-radius:6px;flex-shrink:0;background:#eee;}
+/* 動画リンク */
+.video-thumb{display:flex;align-items:center;gap:10px;background:white;border:1px solid #eee;border-radius:var(--r-sm);padding:10px;margin-bottom:8px;text-decoration:none;color:var(--text);}
+.video-thumb img{width:120px;height:90px;object-fit:cover;border-radius:6px;flex-shrink:0;background:#eee;}
 .video-thumb-info{flex:1;min-width:0;}
 .video-thumb-name{font-size:13px;font-weight:700;margin-bottom:4px;}
 .video-thumb-num{font-size:10px;color:var(--text3);margin-bottom:2px;}
 .video-thumb-status{display:flex;gap:4px;flex-wrap:nowrap;margin-top:6px;}
-.vbtn{font-size:10px;padding:3px 8px;border-radius:5px;border:1.5px solid #ddd;background:white;color:#aaa;font-family:inherit;font-weight:700;cursor:pointer;white-space:nowrap;}
+.vbtn{font-size:10px;padding:4px 10px;border-radius:5px;border:1.5px solid #ddd;background:white;color:#aaa;font-family:inherit;font-weight:700;cursor:pointer;white-space:nowrap;}
 .vbtn.active.r{background:var(--red);border-color:var(--red);color:white;}
 .vbtn.active.b{background:var(--blue);border-color:var(--blue);color:white;}
 .vbtn.active.g{background:var(--green);border-color:var(--green);color:white;}
+
+/* YouTube埋め込み */
+.video-embed{position:relative;width:100%;padding-bottom:56.25%;height:0;border-radius:var(--r-sm);overflow:hidden;margin:12px 0;background:#000;}
+.video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
 
 /* 用語辞典 */
 .term-grid{display:grid;gap:8px;}
@@ -167,15 +182,22 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .term-name{font-size:14px;font-weight:700;color:var(--red);margin-bottom:4px;}
 .term-desc{font-size:12px;line-height:1.7;color:#444;}
 
-/* カリキュラム16項目 */
-.curr-grid{display:grid;gap:8px;}
+/* カリキュラム */
+.curr-grid{display:grid;gap:10px;}
 @media(min-width:600px){.curr-grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:1024px){.curr-grid{grid-template-columns:repeat(3,1fr);}}
-.curr-item{background:white;border:1px solid #eee;border-radius:var(--r-sm);padding:10px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:10px;}
-.curr-item img{width:80px;height:60px;object-fit:cover;border-radius:6px;background:#eee;flex-shrink:0;}
+.curr-item{background:white;border:1px solid #eee;border-radius:var(--r-sm);padding:10px;display:flex;flex-direction:column;gap:8px;}
+.curr-head{display:flex;align-items:center;gap:10px;}
+.curr-head img{width:80px;height:60px;object-fit:cover;border-radius:6px;background:#eee;flex-shrink:0;}
 .curr-info{flex:1;min-width:0;}
 .curr-num{font-size:10px;color:var(--text3);}
 .curr-name{font-size:13px;font-weight:700;}
+.curr-link{font-size:10px;color:var(--blue);text-decoration:none;display:inline-block;margin-top:2px;}
+.curr-status{display:flex;gap:4px;justify-content:center;}
+.cs-btn{flex:1;padding:6px 4px;font-size:11px;border-radius:5px;border:1.5px solid #ddd;background:white;color:#aaa;font-family:inherit;font-weight:700;cursor:pointer;}
+.cs-btn.active.x{background:var(--red);border-color:var(--red);color:white;}
+.cs-btn.active.t{background:var(--gold);border-color:var(--gold);color:white;}
+.cs-btn.active.o{background:var(--green);border-color:var(--green);color:white;}
 
 /* 22カテゴリ */
 .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
@@ -184,49 +206,38 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 .cat-item{background:white;border:1px solid #eee;border-radius:var(--r-sm);padding:10px 12px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;}
 .cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
 
-/* サービス案内カード */
+/* サービス案内 */
 .svc-card{background:white;border:1px solid #eee;border-radius:var(--r);padding:18px;margin-bottom:12px;}
 .svc-head{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
-.svc-icon{width:44px;height:44px;border-radius:10px;background:var(--red-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
 .svc-name{font-size:15px;font-weight:700;color:var(--text);}
-.svc-tag{font-size:9px;color:var(--red);background:var(--red-pale);padding:2px 6px;border-radius:4px;font-weight:700;display:inline-block;margin-top:2px;}
-.svc-desc{font-size:13px;line-height:1.8;color:#444;margin-bottom:12px;}
+.svc-tag{font-size:9px;background:var(--red-pale);color:var(--red);padding:2px 6px;border-radius:4px;font-weight:700;display:inline-block;margin-top:2px;}
+.svc-desc{font-size:13px;line-height:1.9;color:#444;margin-bottom:12px;}
 .svc-link{display:inline-block;background:var(--red);color:white;padding:8px 18px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;}
-.svc-link:hover{background:var(--red-dark);}
+.svc-link.dis{background:#bbb;cursor:not-allowed;}
+.svc-price{font-size:11px;color:var(--text2);margin-bottom:8px;font-weight:600;}
 
-/* ナビゲーション（前へ/次へ） */
+/* ナビゲーション */
 .ch-nav{display:flex;justify-content:space-between;gap:8px;margin-top:24px;padding-top:20px;border-top:1px dashed #ddd;}
 .ch-nav a{flex:1;padding:10px;background:var(--bg);border-radius:var(--r-sm);text-decoration:none;color:var(--text);font-size:11px;font-weight:600;text-align:center;}
-.ch-nav a:hover{background:#e8e6e0;}
 .ch-nav .prev{text-align:left;}
 .ch-nav .next{text-align:right;}
 
-/* フッター */
 .footer{background:var(--text);color:white;padding:30px 20px;margin-top:30px;border-radius:var(--r);text-align:center;}
 .footer-name{font-size:14px;font-weight:700;margin-bottom:8px;}
 .footer-info{font-size:11px;opacity:0.7;line-height:1.8;}
 
-/* スクロールトップボタン */
 .scroll-top{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;background:var(--red);color:white;border:none;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:50;display:none;font-family:inherit;}
 .scroll-top.show{display:block;}
-
-/* ドラフト用マーカー（ヨシさん修正用） */
-.draft{position:relative;}
-.draft::before{content:'✏️ ドラフト';position:absolute;top:8px;right:8px;font-size:9px;background:#fffbf0;color:#a87810;padding:2px 6px;border-radius:4px;border:1px solid #fde7a8;font-weight:700;}
 </style>
 </head>
 <body>
 
 <div class="wrap">
 
-<!-- ===== PC用サイドバー目次 ===== -->
 <aside class="sidebar">
   <div class="sidebar-logo">
-    <div class="sidebar-logo-img" style="background:var(--red);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:11px;">OB</div>
-    <div>
-      <div class="sidebar-logo-txt">ONE-BALANCE</div>
-      <div style="font-size:9px;color:var(--text3);margin-top:2px;">ボクシング教科書</div>
-    </div>
+    <img src="logo.jpg" alt="ONE-BALANCE BOXING GYM" onerror="this.style.display='none'">
   </div>
   <div class="sidebar-title">CONTENTS</div>
   <ul class="sidebar-nav">
@@ -246,17 +257,11 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 
 <main class="main">
 
-<!-- ===== モバイルヘッダー ===== -->
 <header class="mb-header">
-  <div class="mb-logo"><img src="https://onebalanceyume-beep.github.io/onebalance-member/icons/icon-192x192.png" alt="OB" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=\'color:var(--red);font-weight:800;font-size:12px\'>OB</div>'"></div>
-  <div>
-    <div class="mb-title">ボクシング教科書</div>
-    <div class="mb-sub">ONE-BALANCE</div>
-  </div>
+  <img src="logo.jpg" alt="ONE-BALANCE" onerror="this.style.display='none'">
   <button class="mb-menu" onclick="document.getElementById('mb-toc').classList.add('open')">目次 ☰</button>
 </header>
 
-<!-- ===== モバイル目次オーバーレイ ===== -->
 <div class="mb-toc" id="mb-toc" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="mb-toc-inner">
     <button class="mb-toc-close" onclick="document.getElementById('mb-toc').classList.remove('open')">×</button>
@@ -276,17 +281,14 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 表紙 ===== -->
 <div class="cover" id="top">
   <div class="cover-vol">VOL.1</div>
-  <div class="cover-logo"><img src="https://onebalanceyume-beep.github.io/onebalance-member/icons/icon-192x192.png" alt="OB" onerror="this.parentNode.innerHTML='OB'"></div>
-  <div class="cover-brand">ONE-BALANCE</div>
+  <div class="cover-logo"><img src="logo.jpg" alt="ONE-BALANCE BOXING GYM"></div>
   <div class="cover-ttl">ボクシング教科書</div>
-  <div class="cover-sub">大人になってはじめる人のための<br>はじめての一冊</div>
+  <div class="cover-sub">大人になってはじめる人のための<br>ボクシング革命の一冊</div>
   <div class="cover-foot">ONE-BALANCE BOXING GYM</div>
 </div>
 
-<!-- ===== 目次（本文用） ===== -->
 <div class="chapter">
   <div class="ch-num">CONTENTS</div>
   <div class="ch-ttl">目次</div>
@@ -294,46 +296,72 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   <div class="ch-line"></div>
 
   <div class="toc-grid">
-    <a href="#ch1" class="toc-item"><div class="toc-num">1</div><div class="toc-info"><div class="toc-name">はじめに</div><div class="toc-desc">代表からの手紙・教科書の使い方</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch1" class="toc-item"><div class="toc-num">1</div><div class="toc-info"><div class="toc-name">はじめに</div><div class="toc-desc">代表挨拶・教科書の使い方</div></div><div class="toc-arrow">→</div></a>
     <a href="#ch2" class="toc-item"><div class="toc-num">2</div><div class="toc-info"><div class="toc-name">マインド・心構え</div><div class="toc-desc">続けられる人の特徴・3ヶ月後の自分</div></div><div class="toc-arrow">→</div></a>
     <a href="#ch3" class="toc-item"><div class="toc-num">3</div><div class="toc-info"><div class="toc-name">マナー・基礎知識</div><div class="toc-desc">挨拶・持ち物・服装</div></div><div class="toc-arrow">→</div></a>
     <a href="#ch4" class="toc-item"><div class="toc-num">4</div><div class="toc-info"><div class="toc-name">ボクシング用語辞典</div><div class="toc-desc">50音順 30語</div></div><div class="toc-arrow">→</div></a>
-    <a href="#ch5" class="toc-item"><div class="toc-num b">5</div><div class="toc-info"><div class="toc-name">基礎・準備</div><div class="toc-desc">構え方・バンテージの巻き方</div></div><div class="toc-arrow">→</div></a>
-    <a href="#ch6" class="toc-item"><div class="toc-num b">6</div><div class="toc-info"><div class="toc-name">基本カリキュラム16項目</div><div class="toc-desc">ジャブからロープまで</div></div><div class="toc-arrow">→</div></a>
-    <a href="#ch7" class="toc-item"><div class="toc-num b">7</div><div class="toc-info"><div class="toc-name">技術別マスター</div><div class="toc-desc">22カテゴリの動画集</div></div><div class="toc-arrow">→</div></a>
-    <a href="#ch8" class="toc-item"><div class="toc-num">8</div><div class="toc-info"><div class="toc-name">上達のヒント</div><div class="toc-desc">自己診断・家トレ10分</div></div><div class="toc-arrow">→</div></a>
-    <a href="#ch10" class="toc-item"><div class="toc-num">10</div><div class="toc-info"><div class="toc-name">食事・体づくり</div><div class="toc-desc">食事・水分・サプリメント</div></div><div class="toc-arrow">→</div></a>
-    <a href="#ch11" class="toc-item"><div class="toc-num g">11</div><div class="toc-info"><div class="toc-name">サービス案内</div><div class="toc-desc">ONE-BALANCEの5つのサービス</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch5" class="toc-item"><div class="toc-num b">5</div><div class="toc-info"><div class="toc-name">基礎・準備</div><div class="toc-desc">構え方・バンテージ</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch6" class="toc-item"><div class="toc-num b">6</div><div class="toc-info"><div class="toc-name">基本カリキュラム16項目</div><div class="toc-desc">自己採点メーター付き</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch7" class="toc-item"><div class="toc-num b">7</div><div class="toc-info"><div class="toc-name">技術別マスター</div><div class="toc-desc">22カテゴリ動画集</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch8" class="toc-item"><div class="toc-num">8</div><div class="toc-info"><div class="toc-name">上達のヒント</div><div class="toc-desc">自己診断・家トレ動画</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch10" class="toc-item"><div class="toc-num">10</div><div class="toc-info"><div class="toc-name">食事・体づくり</div><div class="toc-desc">食事・水分・サプリ</div></div><div class="toc-arrow">→</div></a>
+    <a href="#ch11" class="toc-item"><div class="toc-num g">11</div><div class="toc-info"><div class="toc-name">サービス案内</div><div class="toc-desc">ONE-BALANCEの6サービス</div></div><div class="toc-arrow">→</div></a>
   </div>
 </div>
 
-<!-- ===== 第1章 はじめに ===== -->
 <div class="chapter" id="ch1">
   <div class="ch-num">CHAPTER 1</div>
   <div class="ch-ttl">はじめに</div>
   <div class="ch-sub">FROM THE FOUNDER</div>
   <div class="ch-line"></div>
 
-  <div class="section draft">
-    <h3>1-3. 代表からの手紙</h3>
-    <div class="letter">
-      <p>ようこそ、ONE-BALANCEへ。<br>この本を手に取ってくれて、本当にありがとうございます。</p>
+  <div class="profile">
+    <div class="profile-photo"><img src="trainer.jpg" alt="代表トレーナー" onerror="this.parentNode.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;color:#aaa;font-size:11px\'>写真</div>'"></div>
+    <div class="profile-info">
+      <div class="profile-role">代表トレーナー</div>
+      <div class="profile-name">長尾</div>
+      <div class="profile-name-en">NAGAO</div>
+      <div class="profile-bio">全日本実業団ボクシング選手権で3階級を制覇し、大会初の快挙を達成。指導者として、誰もが自分の可能性を広げられる場を米子の地に作りました。</div>
     </div>
-    <p>40代、50代から始める人を、僕は何百人も見てきました。最初は誰だって不安です。「運動なんて何年もやってない」「他の人より下手だったら恥ずかしい」「続けられるかな」——みんな同じことを思います。</p>
-    <p>でも、安心してください。この教科書には、不安を解消するための答えが全部書いてあります。順番に読んでくれれば大丈夫。一緒に頑張りましょう。</p>
+  </div>
+
+  <div class="records">
+    <div class="records-ttl">— 大会実績 —</div>
+    <div class="records-grid">
+      <div class="record"><div class="record-year">2005</div><div class="record-name">全日本実業団ボクシング選手権<br>バンタム級 優勝</div></div>
+      <div class="record"><div class="record-year">2006</div><div class="record-name">全日本実業団ボクシング選手権<br>フェザー級 優勝＆MVP<br>（2階級制覇）</div></div>
+      <div class="record"><div class="record-year">2006</div><div class="record-name">全日本社会人選手権<br>バンタム級 優勝</div></div>
+      <div class="record"><div class="record-year">2007</div><div class="record-name">全日本実業団ボクシング選手権<br>ライト級 優勝＆MVP<br>（3階級制覇・大会初）</div></div>
+      <div class="record"><div class="record-year">2012</div><div class="record-name">全国高校総体<br>ライトウェルター級 出場</div></div>
+      <div class="record"><div class="record-year">2013</div><div class="record-name">全国高校総体 中国大会<br>ライトウェルター級 準優勝</div></div>
+      <div class="record"><div class="record-year">2013</div><div class="record-name">全国高校総体<br>ライトウェルター級 出場</div></div>
+    </div>
+  </div>
+
+  <div class="section" style="margin-top:32px;">
+    <h3>1-3. 代表からのご挨拶</h3>
+    <div class="letter">
+      <p>ONE-BALANCEに興味を持っていただき、ありがとうございます。</p>
+    </div>
+    <p>大人になってからボクシングを始められた方が、どうやったらカッコよくボクシングができるかな——僕はずっとそれを考えてきました。</p>
+    <p>僕自身、ボクシングを始めたばかりの頃は、何もわからなくて、何をやればいいのかも見えなくて、不安でいっぱいだったことを今でも思い出します。あの時の自分のような方々のために、その問題を少しでも解消できればと、この『ワンバランスボクシング教科書』を作りました。</p>
+    <p>もちろん、僕の言っていることが全てではありません。ただ、センスがない中でコツコツとやってきた僕だからこそ、誰にでも実現可能なレベルまで落とし込んだ教科書になっていると思います。センスとか才能とか、そういうものは一切関係ありません。</p>
+    <p>ONE-BALANCEのミッションは「ボクシング革命を起こす」こと。「厳しい」「きつい」というボクシングのイメージを「楽しい」に変えていく。これが僕らの使命です。</p>
+    <p>そして「心と体を元気に、カッコよく、素敵に」という理念を叶えながら、ボクシング革命を起こしていきます。</p>
+    <p>今この教科書を読んでくださっている方が、できなかったことができるようになって、自信がついていったり、強くなっていただけたら、これほど嬉しいことはありません。</p>
     <div class="letter-sign">代表トレーナー　長尾</div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>1-4. この教科書の使い方</h3>
     <div class="box">
       <div class="box-ttl">📖 おすすめの読み方</div>
-      <p>1. 最初は1章から順番に読んでください<br>2. 5章以降は気になる項目から見てOK<br>3. 動画は何度でも見返してください<br>4. 分からないことは遠慮なくトレーナーに聞いてください</p>
+      <p>1. 最初は1章から順番に読んでください<br>2. 5章以降は気になる項目から見てOK<br>3. 動画は何度でも見返してください</p>
     </div>
     <p>この教科書は、ONE-BALANCEで学ぶ全ての知識をまとめた一冊です。読み物として読んでもよし、辞書のように使ってもよし、好きな使い方をしてください。</p>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>1-5. ボクシングを始めたあなたへ</h3>
     <p>ボクシングは「強くなるためのもの」と思われがちですが、本当の魅力は別にあります。それは、<strong>自分と向き合える時間が持てる</strong>ということ。</p>
     <p>ジムにいる間は、仕事のことも、家族のことも、SNSのことも全部忘れられます。汗をかいて、パンチを打って、終わった頃にはスッキリしている。これが大人にとっての一番の財産です。</p>
@@ -346,14 +374,13 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第2章 マインド ===== -->
 <div class="chapter" id="ch2">
   <div class="ch-num">CHAPTER 2</div>
   <div class="ch-ttl">マインド・心構え</div>
   <div class="ch-sub">MINDSET</div>
   <div class="ch-line"></div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>2-1. 大人がボクシングで得られるもの3つ</h3>
     <div class="box r">
       <div class="box-ttl">① 健康な体</div>
@@ -369,48 +396,48 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     </div>
   </div>
 
-  <div class="section draft">
-    <h3>2-2. 続けられる人と辞める人の違い</h3>
-    <p>10年指導してきて、辞める人には共通点があります。それは<strong>「完璧を目指してしまう」</strong>こと。</p>
-    <p>続けられる人は、できなくても気にしません。「今日は来た」だけで自分を褒めます。週1回でも、月1回でもいい。続けることが何より大切。</p>
+  <div class="section">
+    <h3>2-2. 続けられる人と続けられない人の違い</h3>
+    <p>続けられる人と続けられない人の違い、それは<strong>「自分はできる」と慢心しないこと</strong>です。</p>
+    <p>ボクシングはできないことが多いスポーツです。「できる」「できない」で考えるのではなく、<strong>「やってみる」</strong>という姿勢こそが何より大事になります。</p>
     <div class="box">
       <div class="box-ttl">💡 続ける秘訣</div>
-      <p>・行く日を決めずに「行きたい時に行く」<br>・完璧を求めない<br>・できないことより、できたことに目を向ける<br>・トレーナー・仲間と話す時間を作る</p>
+      <p>完璧を「目指す」けれども「目指さない」。この両方を兼ね備えている方は、続く人が多いように感じます。完璧を求めすぎず、でも向上心は持ち続ける。そのバランスが大切です。</p>
     </div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>2-3.「上達してる気がしない時」に読むページ</h3>
-    <p>2〜3ヶ月続けると、必ず「全然うまくならない」と感じる時期がきます。これは<strong>誰もが通る道</strong>です。</p>
-    <p>上達は階段状に進みます。横ばいの時期は、実は<strong>体が変化を吸収している大切な時間</strong>。ここで辞めると、次のステップに上がれません。</p>
-    <div class="letter">
-      <p>うまくならない時期こそ、続けた人だけが次のレベルに行けます。焦らず、淡々と。それが一番の近道です。</p>
-    </div>
-  </div>
-
-  <div class="section draft">
-    <h3>2-5.「自信なくした時」に読むページ</h3>
-    <p>初心者の頃は、周りが上手く見えて落ち込むことがあります。でも、その人たちもみんな、最初はあなたと同じだったんです。</p>
-    <p>比べる相手は<strong>過去の自分だけ</strong>。1ヶ月前のあなたと今のあなたを比べてください。必ず何かが変わっています。</p>
+    <p>大前提として、<strong>練習をして下手になる人はいません</strong>。「上手くなってる気がしない」と感じるのは、実はとても良い傾向です。</p>
+    <p>上達は右肩上がりの斜めのラインでは進みません。<strong>階段のように上がっていく</strong>のです。一気に上手くなった後、その状態を維持する期間があり、またふとしたときに、ふわっと次の段に上る。これがボクシングの上達の法則です。</p>
     <div class="box r">
-      <div class="box-ttl">🥊 自信を取り戻す3つの行動</div>
-      <p>1. 1ヶ月前の動画を見返す<br>2. トレーナーに「どこが成長した？」と聞く<br>3. 仲間と話す（一人で抱え込まない）</p>
+      <div class="box-ttl">🪜 階段の法則</div>
+      <p>この法則を信じて、コツコツ積み上げてください。横ばいの時期こそ、次の段に上がる準備期間。焦らず淡々と続けることが、何よりの近道です。</p>
     </div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
+    <h3>2-5.「自信なくした時」に読むページ</h3>
+    <div class="letter">
+      <p>前回の自分を超えているのか。</p>
+    </div>
+    <p>自信をなくす時というのは、たいてい<strong>他人と比べたとき</strong>です。ボコボコにされた、上手くできなかった——でも、そこじゃないんです。</p>
+    <p>比べる相手は、過去の自分だけ。<strong>前回の自分と比べてどうなのか</strong>、もう一度見つめ直してみてください。</p>
+  </div>
+
+  <div class="section">
     <h3>2-6. 3ヶ月後・6ヶ月後・1年後の自分の姿</h3>
     <div class="box">
       <div class="box-ttl">📅 3ヶ月後</div>
-      <p>体が締まり、姿勢が変わります。階段で息切れしなくなります。ジャブとワンツーが綺麗に打てるようになります。</p>
+      <p>基本が一通り終わり、ある程度のパンチが打てるようになっています。実戦にはまだ早い段階ですが、「できない技」というものはほぼなくなっている状態が多いです。<br><br>まだできないことがある方も、<strong>焦らないでください</strong>。早く覚える人で本当に上手な人は、あまり見たことがありません。ペースは案外、ゆっくりの方が良いのかもしれません。</p>
     </div>
     <div class="box">
       <div class="box-ttl">📅 6ヶ月後</div>
-      <p>5kg前後の減量に成功する人が多いです。サンドバッグが楽しくなります。「ボクシングやってる」と人に言えるようになります。</p>
+      <p>実戦練習にも慣れてくる頃です。ただ、この時期から<strong>基本動作を忘れがち</strong>になります。定期的に基本練習に戻り、自分のあるべきスタイルに整えてください。<br><br>スランプに陥る方もいます。そんな時こそ、基本練習に戻りましょう。</p>
     </div>
     <div class="box">
       <div class="box-ttl">📅 1年後</div>
-      <p>マスボクシングに挑戦できます。生活習慣が完全に変わります。ジムが「行く場所」ではなく「帰る場所」になります。</p>
+      <p>最初に思い描いていたボクシングのトレーニングメニューが、こなせるようになっているはずです。ただ、理想のスタイルにはまだまだ——という状態かもしれません。<br><br>実は<strong>ここからがコツコツできるかどうかの試されどころ</strong>。ここで止める人と止めない人で、レベルの差が一気に広がります。ぜひ続けてみてください。</p>
     </div>
   </div>
 
@@ -420,33 +447,31 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第3章 マナー ===== -->
 <div class="chapter" id="ch3">
   <div class="ch-num">CHAPTER 3</div>
   <div class="ch-ttl">マナー・基礎知識</div>
   <div class="ch-sub">ETIQUETTE</div>
   <div class="ch-line"></div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>3-2. 挨拶のタイミング</h3>
-    <p>ボクシングジムは「挨拶のある場所」。大人になってから始めると、最初は気恥ずかしいかもしれません。でも、これが一番大事なマナーです。</p>
+    <p>ボクシングジムは「挨拶のある場所」。最初は気恥ずかしいかもしれませんが、これが一番大事なマナーです。</p>
     <div class="box">
       <div class="box-ttl">挨拶のシーン</div>
       <p>・入館時：「こんにちは」「お疲れ様です」<br>・トレーナー・先輩を見かけたら：軽く会釈でもOK<br>・退館時：「お疲れ様でした」<br>・スパー・マス相手とは：始まりと終わりに必ず</p>
     </div>
-    <p>大きな声を出す必要はありません。会釈と「こんにちは」で十分。これで、ジム全体の雰囲気が良くなります。</p>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>3-3. タオル・水分・持ち物リスト</h3>
     <div class="box r">
       <div class="box-ttl">🎒 必須の持ち物</div>
       <ul>
         <li>タオル（汗拭き用）2枚</li>
-        <li>水分（500ml以上のペットボトル or 水筒）</li>
+        <li><strong>水（1リットル以上推奨）</strong></li>
         <li>動きやすい服装（Tシャツ・短パン）</li>
         <li>室内シューズ（外履きNG）</li>
-        <li>バンテージ（最初はジムで貸し出し可）</li>
+        <li>バンテージ（購入することをお勧めします）</li>
       </ul>
     </div>
     <div class="box">
@@ -459,35 +484,44 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     </div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>3-5. 練習中のNG行動</h3>
     <div class="box r">
       <div class="box-ttl">⚠️ これだけは避けて</div>
       <ul>
-        <li>サンドバッグの蹴り（ボクシングジムなのでパンチのみ）</li>
-        <li>道具を投げる・乱暴に扱う</li>
-        <li>大声・暴言</li>
-        <li>許可なく他の会員の練習に口出し</li>
-        <li>スマホで他の会員を撮影</li>
+        <li><strong>練習中は座らない</strong>（座るのはダウンした時だけ）</li>
+        <li>ペア練習の始まりと終わりはグローブを合わせて、しっかりと挨拶する</li>
+        <li>道具を投げない・乱暴に扱わない（特にグローブ）</li>
+        <li>グローブを床に置く時は、<strong>手のひら側を床に置く</strong></li>
+        <li>大声・暴言NG</li>
+        <li>許可なく他の会員の練習に口出しNG</li>
+        <li>スマホで他の会員を撮影NG</li>
       </ul>
     </div>
-    <p>当たり前のことばかりですが、改めて確認しておきましょう。みんなが気持ちよく練習できる場所を、みんなで作っていきます。</p>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>3-6. 服装の選び方</h3>
     <div class="box">
       <div class="box-ttl">👕 トップス</div>
-      <p>速乾性のあるTシャツがベスト。綿100%は汗を吸って重くなるので避けましょう。長袖よりも半袖がおすすめ。</p>
+      <p>一番良いのは<strong>ノースリーブ</strong>。肩周りが回る感覚がしっかり出るので、肩のグルグルもよく分かります。もちろんTシャツでも問題ありません。<br><br><strong>体重を落としたい人</strong>は、少し厚着をして動きづらいけど汗をしっかりかける格好にすると、ダイエット効果が高まるのでおすすめです。</p>
     </div>
     <div class="box">
       <div class="box-ttl">👖 ボトムス</div>
-      <p>ジャージや短パンが動きやすい。ジーンズや硬い素材はNG。締め付けが少ないものを選びましょう。</p>
+      <p>一番良いのは<strong>短パン</strong>。スパッツでもOK。長ズボンであまりやる方は少ないですね。<br><br>もちろん<strong>デニムは絶対NG</strong>。動きづらいものは避けましょう。</p>
     </div>
     <div class="box">
       <div class="box-ttl">👟 シューズ</div>
-      <p>軽くてグリップ力があるものを。ボクシングシューズが理想ですが、ランニングシューズでも問題ありません。</p>
+      <p>一番良いのは<strong>ボクシングシューズ</strong>ですが、価格が高いので、<strong>室内競技のシューズ</strong>でも問題ありません。詳しい選び方は下の動画でも解説しています。</p>
     </div>
+    <a href="https://youtu.be/ghAKBQ7wSO4" target="_blank" class="video-thumb">
+      <img src="https://img.youtube.com/vi/ghAKBQ7wSO4/mqdefault.jpg" alt="シューズの選び方" loading="lazy">
+      <div class="video-thumb-info">
+        <div class="video-thumb-num">動画</div>
+        <div class="video-thumb-name">ボクシングシューズの選び方</div>
+        <div class="video-thumb-status"><button class="vbtn" data-watch="shoes_x">未視聴</button><button class="vbtn r" data-watch="shoes_o">視聴済み ✓</button></div>
+      </div>
+    </a>
   </div>
 
   <div class="ch-nav">
@@ -496,14 +530,13 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第4章 用語辞典 ===== -->
 <div class="chapter" id="ch4">
   <div class="ch-num">CHAPTER 4</div>
   <div class="ch-ttl">ボクシング用語辞典</div>
   <div class="ch-sub">GLOSSARY</div>
   <div class="ch-line"></div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>4-1. 50音順 30語</h3>
     <div class="term-grid">
       <div class="term"><div class="term-name">アッパー</div><div class="term-desc">下から突き上げるパンチ。接近戦で使う。</div></div>
@@ -545,7 +578,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第5章 基礎・準備 ===== -->
 <div class="chapter" id="ch5">
   <div class="ch-num b">CHAPTER 5</div>
   <div class="ch-ttl">基礎・準備</div>
@@ -560,7 +592,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <div class="video-thumb-info">
         <div class="video-thumb-num">基礎①</div>
         <div class="video-thumb-name">構え方の基本</div>
-        <div class="video-thumb-status"><button class="vbtn" data-watch="kiso1">未視聴</button><button class="vbtn r" data-watch="kiso1">視聴済み ✓</button></div>
+        <div class="video-thumb-status"><button class="vbtn" data-watch="kiso1_x">未視聴</button><button class="vbtn r" data-watch="kiso1_o">視聴済み ✓</button></div>
       </div>
     </a>
     <a href="https://youtu.be/ePguwF6JBpE" target="_blank" class="video-thumb">
@@ -568,7 +600,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <div class="video-thumb-info">
         <div class="video-thumb-num">基礎②</div>
         <div class="video-thumb-name">構えの応用</div>
-        <div class="video-thumb-status"><button class="vbtn" data-watch="kiso2">未視聴</button><button class="vbtn r" data-watch="kiso2">視聴済み ✓</button></div>
+        <div class="video-thumb-status"><button class="vbtn" data-watch="kiso2_x">未視聴</button><button class="vbtn r" data-watch="kiso2_o">視聴済み ✓</button></div>
       </div>
     </a>
     <a href="https://youtu.be/ghAKBQ7wSO4" target="_blank" class="video-thumb">
@@ -576,7 +608,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <div class="video-thumb-info">
         <div class="video-thumb-num">基礎③</div>
         <div class="video-thumb-name">構えの完成</div>
-        <div class="video-thumb-status"><button class="vbtn" data-watch="kiso3">未視聴</button><button class="vbtn r" data-watch="kiso3">視聴済み ✓</button></div>
+        <div class="video-thumb-status"><button class="vbtn" data-watch="kiso3_x">未視聴</button><button class="vbtn r" data-watch="kiso3_o">視聴済み ✓</button></div>
       </div>
     </a>
   </div>
@@ -589,7 +621,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <div class="video-thumb-info">
         <div class="video-thumb-num">バンテージ</div>
         <div class="video-thumb-name">左手の巻き方</div>
-        <div class="video-thumb-status"><button class="vbtn" data-watch="ban_l">未視聴</button><button class="vbtn r" data-watch="ban_l">視聴済み ✓</button></div>
+        <div class="video-thumb-status"><button class="vbtn" data-watch="ban_l_x">未視聴</button><button class="vbtn r" data-watch="ban_l_o">視聴済み ✓</button></div>
       </div>
     </a>
     <a href="https://youtu.be/YdnXelJPqSo" target="_blank" class="video-thumb">
@@ -597,7 +629,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <div class="video-thumb-info">
         <div class="video-thumb-num">バンテージ</div>
         <div class="video-thumb-name">右手の巻き方</div>
-        <div class="video-thumb-status"><button class="vbtn" data-watch="ban_r">未視聴</button><button class="vbtn r" data-watch="ban_r">視聴済み ✓</button></div>
+        <div class="video-thumb-status"><button class="vbtn" data-watch="ban_r_x">未視聴</button><button class="vbtn r" data-watch="ban_r_o">視聴済み ✓</button></div>
       </div>
     </a>
   </div>
@@ -608,7 +640,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第6章 16項目 ===== -->
 <div class="chapter" id="ch6">
   <div class="ch-num b">CHAPTER 6</div>
   <div class="ch-ttl">基本カリキュラム16項目</div>
@@ -616,7 +647,23 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   <div class="ch-line b"></div>
 
   <div class="section">
-    <p>ホワイト帯昇格に必要な16項目です。動画で学び、実際にトレーナーから合格をもらいましょう。</p>
+    <p>16項目を3段階（×未着手／△挑戦中／○できた）で自己採点しましょう。<strong>合格点は70%以上</strong>。動画で学んで、自分でチェックしてみてください。</p>
+
+    <div class="meter-card">
+      <div class="meter-head">
+        <div>
+          <div class="meter-label">あなたの達成度</div>
+          <div id="curr-status-text" style="font-size:11px;color:var(--text2);margin-top:2px;">読み込み中...</div>
+        </div>
+        <div class="meter-pct" id="curr-pct">0%</div>
+      </div>
+      <div class="meter-bar">
+        <div class="meter-fill" id="curr-fill" style="width:0%"></div>
+        <div class="meter-target"></div>
+      </div>
+      <div class="meter-status ng" id="curr-status">あと70%まで頑張ろう！</div>
+    </div>
+
     <div class="curr-grid" id="curr-grid"></div>
   </div>
 
@@ -626,7 +673,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第7章 22カテゴリ ===== -->
 <div class="chapter" id="ch7">
   <div class="ch-num b">CHAPTER 7</div>
   <div class="ch-ttl">技術別マスター</div>
@@ -644,40 +690,45 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第8章 上達のヒント ===== -->
 <div class="chapter" id="ch8">
   <div class="ch-num">CHAPTER 8</div>
   <div class="ch-ttl">上達のヒント</div>
   <div class="ch-sub">TIPS FOR IMPROVEMENT</div>
   <div class="ch-line"></div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>8-2. 自己診断チェックリスト</h3>
-    <p>今のあなたのレベルをチェックしてみましょう。タップで記録できます。</p>
-    <ul class="checklist">
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c1"><div class="check-mark">✓</div>正しい構えができている</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c2"><div class="check-mark">✓</div>ジャブが綺麗に打てる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c3"><div class="check-mark">✓</div>ワンツーがスムーズに繋がる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c4"><div class="check-mark">✓</div>パンチを打ちながら呼吸できる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c5"><div class="check-mark">✓</div>ガードを下げずにパンチを打てる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c6"><div class="check-mark">✓</div>ステップを踏みながら動ける</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c7"><div class="check-mark">✓</div>3ラウンド連続でサンドバッグが打てる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c8"><div class="check-mark">✓</div>ロープが30秒連続で跳べる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c9"><div class="check-mark">✓</div>シャドーを5分続けられる</li>
-      <li onclick="this.classList.toggle('checked');saveCheck()" data-id="c10"><div class="check-mark">✓</div>練習後、爽快感を感じる</li>
-    </ul>
+    <p>鏡の前で、または動画撮影しながらチェックしてみましょう。<strong>合格点は70%以上</strong>です。</p>
+
+    <div class="meter-card">
+      <div class="meter-head">
+        <div>
+          <div class="meter-label">あなたの達成度</div>
+          <div id="check-status-text" style="font-size:11px;color:var(--text2);margin-top:2px;">読み込み中...</div>
+        </div>
+        <div class="meter-pct" id="check-pct">0%</div>
+      </div>
+      <div class="meter-bar">
+        <div class="meter-fill" id="check-fill" style="width:0%"></div>
+        <div class="meter-target"></div>
+      </div>
+      <div class="meter-status ng" id="check-status">あと70%まで頑張ろう！</div>
+    </div>
+
+    <ul class="checklist" id="check-list"></ul>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>8-4. 鏡の前でやるシャドー10分メニュー（家トレ）</h3>
-    <p>ジムに行けない日でも、家でできる10分メニュー。鏡があれば最高。</p>
-    <div class="box">
-      <div class="box-ttl">⏱ 10分メニュー</div>
-      <p><strong>0:00〜2:00</strong>　ストレッチ・肩回し<br><strong>2:00〜4:00</strong>　構えのチェック・ステップ練習<br><strong>4:00〜6:00</strong>　ジャブ100回・ワンツー50回<br><strong>6:00〜8:00</strong>　フック・アッパー練習<br><strong>8:00〜10:00</strong>　シャドー（自由に動く）</p>
+    <p>ジムに行けない日でも、家でできる10分メニュー。下の動画を見ながら一緒に動いてみてください。</p>
+
+    <div class="video-embed">
+      <iframe src="https://www.youtube.com/embed/Ja6mVvvPV4w" title="家トレ動画" allowfullscreen loading="lazy"></iframe>
     </div>
-    <div class="box r">
+
+    <div class="box">
       <div class="box-ttl">💡 家トレのコツ</div>
-      <p>・無理に強く打たない（フォーム重視）<br>・鏡を見て自分の動きをチェック<br>・スマホで撮影してフォーム確認<br>・週3回×10分でも効果あり</p>
+      <p>正しくやるのも大事ですが、<strong>動画と一緒に合わせて動く</strong>ことも大事になります。両方の意識を持ちながら、<strong>完璧主義にはならない</strong>ように。<br><br>できたら<strong>週に3回</strong>はやってみてください。習慣化できたら、こっちのものです！</p>
     </div>
   </div>
 
@@ -687,17 +738,17 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第10章 食事 ===== -->
 <div class="chapter" id="ch10">
   <div class="ch-num">CHAPTER 10</div>
   <div class="ch-ttl">食事・体づくり</div>
   <div class="ch-sub">NUTRITION</div>
   <div class="ch-line"></div>
 
-  <div class="section draft">
-    <h3>10-1. オススメの食べてるもの</h3>
+  <div class="section">
+    <h3>10-1. オススメの食べ方</h3>
+    <p>基本的には、<strong>タンパク質と炭水化物をしっかり摂ること</strong>。そして<strong>油をなるべく避けること</strong>。もし油を取るのであれば、<strong>魚から取るローファット方式</strong>でやることをお勧めします。</p>
     <div class="box">
-      <div class="box-ttl">🍚 主食</div>
+      <div class="box-ttl">🍚 主食（炭水化物）</div>
       <p>白米・玄米・蕎麦・全粒粉パン。練習前のエネルギー源として欠かせません。</p>
     </div>
     <div class="box">
@@ -705,16 +756,16 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       <p>鶏むね肉・鮭・卵・納豆・豆腐。筋肉の修復に必須。1日3回はタンパク質を入れましょう。</p>
     </div>
     <div class="box">
-      <div class="box-ttl">🥗 野菜</div>
-      <p>ブロッコリー・ほうれん草・キャベツ・トマト。色の濃い野菜を意識的に。</p>
+      <div class="box-ttl">🐟 油は魚から（ローファット方式）</div>
+      <p>油を取るなら、サラダ油やバターではなく<strong>魚の油</strong>から。鮭・サバ・イワシなどの青魚がベスト。</p>
     </div>
     <div class="box">
       <div class="box-ttl">🍌 練習前のおすすめ</div>
-      <p>バナナ・おにぎり・ヨーグルト。練習30〜60分前に少量を。</p>
+      <p>バナナ1本がおすすめ。<strong>注意：空腹の時にバナナはあまり良くない</strong>ので、軽く何か食べてからバナナを摂取するか、別のもので代用しましょう。</p>
     </div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>10-2. 避けたい食べ物</h3>
     <div class="box r">
       <div class="box-ttl">⚠️ 避けるべき食べ物</div>
@@ -729,7 +780,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     <p>完全に絶つ必要はありません。「頻度を減らす」ことが大事。週末のご褒美として楽しむのはOK。</p>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>10-3. 練習前後の食事タイミング</h3>
     <div class="box">
       <div class="box-ttl">⏰ 練習前（30〜60分前）</div>
@@ -745,28 +796,24 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     </div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>10-6. 水分補給の正解</h3>
     <p>ボクシングは想像以上に水分を失います。脱水は集中力低下・怪我の原因になります。</p>
     <div class="box">
       <div class="box-ttl">💧 1日の水分量</div>
       <p>体重 × 35ml が目安。体重70kgなら2.4リットル。練習日はもっと多く。</p>
     </div>
-    <div class="box">
-      <div class="box-ttl">💧 練習中の飲み方</div>
-      <p>15分おきに一口ずつ。一気飲みはNG。冷たすぎる水も避けましょう。</p>
-    </div>
     <div class="box r">
-      <div class="box-ttl">💧 こんな時はスポーツドリンク</div>
-      <p>・90分以上の練習<br>・大量の汗をかいた時<br>・夏場の練習</p>
+      <div class="box-ttl">☀️ 夏場の練習・熱中症対策</div>
+      <p>夏場の練習は熱中症になりやすいので注意が必要です。対策としては、<strong>「塩を取る」ではなく「ミネラルを取る」</strong>という認識を持つことが大事になります。<br><br>そんな時は<strong>ポカリスエット</strong>が一番効果的だと思います。</p>
     </div>
   </div>
 
-  <div class="section draft">
+  <div class="section">
     <h3>10-7. サプリメントのオススメ</h3>
     <div class="box">
       <div class="box-ttl">💊 まず買うならこれ</div>
-      <p><strong>プロテイン</strong>：練習後30分以内に摂取。ホエイ系がおすすめ。<br><strong>マルチビタミン</strong>：食事で不足しがちな栄養素を補う。<br><strong>BCAA</strong>：練習中の筋分解を防ぐ。</p>
+      <p><strong>プロテイン</strong>：練習後30分以内に摂取。ホエイ系がおすすめ。<br><strong>マルチビタミン</strong>：食事で不足しがちな栄養素を補う。<br><strong>EAA（推奨）</strong>：必須アミノ酸9種をバランスよく含む。BCAAより上位互換でおすすめ。<br><strong>BCAA</strong>：EAAが取れない人はこちらでもOK。</p>
     </div>
     <div class="box r">
       <div class="box-ttl">⚠️ サプリメントの注意</div>
@@ -780,16 +827,27 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== 第11章 サービス案内 ===== -->
 <div class="chapter" id="ch11">
   <div class="ch-num g">CHAPTER 11</div>
   <div class="ch-ttl">ONE-BALANCEのサービス案内</div>
   <div class="ch-sub">SERVICES</div>
   <div class="ch-line g"></div>
 
-  <p style="font-size:13px;line-height:1.9;color:var(--text2);margin-bottom:20px;">教科書を読んでいただきありがとうございました。最後に、ONE-BALANCEが提供している5つのサービスを紹介します。気になるものがあればぜひご覧ください。</p>
+  <p style="font-size:13px;line-height:1.9;color:var(--text2);margin-bottom:20px;">教科書を読んでいただきありがとうございました。最後に、ONE-BALANCEが提供している6つのサービスを紹介します。気になるものがあればぜひご覧ください。</p>
 
-  <div class="svc-card draft">
+  <div class="svc-card">
+    <div class="svc-head">
+      <div class="svc-icon" style="background:var(--red-pale);">🥊</div>
+      <div>
+        <div class="svc-name">ワンバランスボクシングジム</div>
+        <div class="svc-tag">ジム会員</div>
+      </div>
+    </div>
+    <div class="svc-desc">本格的にボクシングに取り組みたい方へ。設備・トレーナー・仲間が揃った米子のジム。一緒にボクシング革命を起こしましょう。</div>
+    <a href="https://www.one-balance.jp" target="_blank" class="svc-link">詳しく見る →</a>
+  </div>
+
+  <div class="svc-card">
     <div class="svc-head">
       <div class="svc-icon" style="background:var(--blue-pale);">🎬</div>
       <div>
@@ -798,10 +856,10 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       </div>
     </div>
     <div class="svc-desc">いつでもどこでもボクシングが学べる動画サービス。基礎から応用まで体系的に学習できます。</div>
-    <a href="#" class="svc-link" style="background:var(--blue);">詳しく見る →</a>
+    <a href="https://onebalanceyume-beep.github.io/on-lineBOXINGreservation/booking_v3.html" target="_blank" class="svc-link" style="background:var(--blue);">詳しく見る →</a>
   </div>
 
-  <div class="svc-card draft">
+  <div class="svc-card">
     <div class="svc-head">
       <div class="svc-icon" style="background:var(--red-pale);">💪</div>
       <div>
@@ -809,44 +867,45 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
         <div class="svc-tag">マンツーマン</div>
       </div>
     </div>
-    <div class="svc-desc">完全個別指導で目標に最短で到達。ダイエット・体力向上・技術向上、あなただけのプログラムを組みます。</div>
-    <a href="#" class="svc-link">詳しく見る →</a>
+    <div class="svc-desc">完全マンツーマンのプライベートトレーニングジム。その人の基礎筋力・バランスをオーダーメイドでメニューを組み、使える体にしていきます。</div>
+    <a href="https://onebalanceyume-beep.github.io/one-tre/" target="_blank" class="svc-link">詳しく見る →</a>
   </div>
 
-  <div class="svc-card draft">
-    <div class="svc-head">
-      <div class="svc-icon" style="background:var(--red-pale);">🥊</div>
-      <div>
-        <div class="svc-name">ワンバランスボクシングジム会員</div>
-        <div class="svc-tag">ジム会員</div>
-      </div>
-    </div>
-    <div class="svc-desc">本格的にボクシングに取り組みたい方へ。設備・トレーナー・仲間が揃った環境で続けられます。</div>
-    <a href="#" class="svc-link">詳しく見る →</a>
-  </div>
-
-  <div class="svc-card draft">
+  <div class="svc-card">
     <div class="svc-head">
       <div class="svc-icon" style="background:var(--gold-light);">🎓</div>
       <div>
         <div class="svc-name">コーチングスクール</div>
-        <div class="svc-tag">指導者育成</div>
+        <div class="svc-tag">自分軸を作る</div>
       </div>
     </div>
-    <div class="svc-desc">ボクシング指導者を目指す方のためのスクール。実践的な指導スキルを体系的に学べます。</div>
-    <a href="#" class="svc-link" style="background:var(--gold);">詳しく見る →</a>
+    <div class="svc-desc">別事業ですが、ボクシングとは別のスキルとして大事なものです。普段の会話、自分の思いを言語化するトレーニング。「自分軸」を作るための学び。<br><br>これはボクシングにも、仕事にも、友達関係にも喜ばれるスキルの一つ。<strong>マンツーマンの壁打ちコーチング</strong>も受け付けております。</div>
+    <a href="#" target="_blank" class="svc-link" style="background:var(--gold);">詳しく見る →</a>
   </div>
 
-  <div class="svc-card draft">
+  <div class="svc-card">
     <div class="svc-head">
       <div class="svc-icon" style="background:#fef9e7;">🤝</div>
       <div>
-        <div class="svc-name">児童養護施設自立支援パートナーシップ</div>
+        <div class="svc-name">児童養護施設 自立支援パートナーシップ</div>
         <div class="svc-tag">社会貢献</div>
       </div>
     </div>
-    <div class="svc-desc">児童養護施設の子どもたちの自立を、ボクシングを通じて支援する取り組み。地域社会への貢献活動です。</div>
-    <a href="#" class="svc-link" style="background:#27ae60;">詳しく見る →</a>
+    <div class="svc-desc">企業や個人の方々とパートナーを組み、児童養護施設の子どもたちが社会に出ていくための自立支援を行っています。<br><br><strong>パートナーのメリット</strong>：宣伝広告として企業名を掲載できる、支援していることを名乗っていただいても大丈夫です（園長先生から許可済み）。</div>
+    <a href="#" target="_blank" class="svc-link" style="background:#27ae60;">詳しく見る →</a>
+  </div>
+
+  <div class="svc-card" style="border:2px solid var(--gold);background:#fffbf0;">
+    <div class="svc-head">
+      <div class="svc-icon" style="background:var(--gold-light);">🌟</div>
+      <div>
+        <div class="svc-name">オンラインサロン</div>
+        <div class="svc-tag" style="background:var(--gold-light);color:#a87810;">挑戦を応援するコミュニティ</div>
+      </div>
+    </div>
+    <div class="svc-price">月々 880円</div>
+    <div class="svc-desc">みんなが挑戦を応援するコミュニティ。代表が知っている情報をシェアしていきます。挑戦する人たちを応援できて、励まし合えるような環境を、Facebookを利用して作っています。</div>
+    <a href="#" target="_blank" class="svc-link" style="background:var(--gold);">詳しく見る →</a>
   </div>
 
   <div class="ch-nav">
@@ -855,7 +914,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
   </div>
 </div>
 
-<!-- ===== フッター ===== -->
 <div class="footer">
   <div class="footer-name">ONE-BALANCE BOXING GYM</div>
   <div class="footer-info">
@@ -872,7 +930,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 <button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-/* ========== キャッシュ対策強化版 ========== */
 (function cacheControl(){
   if('serviceWorker' in navigator){
     navigator.serviceWorker.getRegistrations().then(regs=>{
@@ -885,25 +942,19 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
     }).catch(()=>{});
   }
   window.addEventListener('pageshow', (e)=>{
-    if(e.persisted){
-      window.location.reload();
-    }
+    if(e.persisted){window.location.reload();}
   });
   let lastHidden = null;
   document.addEventListener('visibilitychange', ()=>{
-    if(document.hidden){
-      lastHidden = Date.now();
-    }else if(lastHidden){
+    if(document.hidden){lastHidden = Date.now();}
+    else if(lastHidden){
       const diff = Date.now() - lastHidden;
-      if(diff > 5 * 60 * 1000){
-        window.location.reload();
-      }
+      if(diff > 5*60*1000){window.location.reload();}
       lastHidden = null;
     }
   });
 })();
 
-/* ========== データ ========== */
 const CURRICULUM = [
   {id:'jab', num:'①', name:'ジャブ', vid:'Aqvc5L3u1so', url:'https://youtu.be/Aqvc5L3u1so'},
   {id:'onetwo', num:'②', name:'ワンツー', vid:'KNTLVDEeVvk', url:'https://youtu.be/KNTLVDEeVvk'},
@@ -922,6 +973,7 @@ const CURRICULUM = [
   {id:'rope3', num:'⑮', name:'ロープ Lv.3', vid:'WPROg0dUmsU', url:'https://youtu.be/WPROg0dUmsU'},
   {id:'rope4', num:'⑯', name:'ロープ Lv.4', vid:'WPROg0dUmsU', url:'https://youtu.be/WPROg0dUmsU'},
 ];
+
 const CATS = [
   {name:'基礎力', color:'#DB444C', url:'https://www.youtube.com/playlist?list=PL-gAc3kb2RX2-Uds0M723ZXstza-qnrhK'},
   {name:'ジャブ', color:'#5BB9CD', url:'https://www.youtube.com/playlist?list=PL-gAc3kb2RX1fASnItHZ-hBx3QlCIHXeX'},
@@ -947,79 +999,120 @@ const CATS = [
   {name:'ボケシング', color:'#888', url:'https://www.youtube.com/playlist?list=PL-gAc3kb2RX1eJ9qfI9tGjBxwscDDHxAI'},
 ];
 
-/* ========== 進捗保存（localStorage即応） ========== */
-const STORAGE_KEY = 'tb_progress_v1';
+const CHECKS = [
+  {id:'k1', text:'足の幅（スタンス）が、正面から見て肩幅分あるかどうか'},
+  {id:'k2', text:'後ろ足のかかとが上がっているかどうか'},
+  {id:'k3', text:'ガードが頬の高さに両方上がっているかどうか'},
+  {id:'k4', text:'脇が開いていないかどうか'},
+  {id:'k5', text:'パンチの時に、反対の手のガードが上がっているかどうか'},
+  {id:'k6', text:'スムーズな連動でワンツーが打てているかどうか'},
+  {id:'k7', text:'踏み込みのステップで、足幅がずれていないかどうか'},
+  {id:'k8', text:'バックステップもスムーズにできるかどうか'},
+  {id:'k9', text:'ステップを踏みながら3分間シャドーできるかどうか'},
+  {id:'k10', text:'縄跳びを10分連続で飛び続けることができるかどうか'},
+  {id:'k11', text:'シャドーが前後だけでなく、横にもちゃんと動けているかどうか'},
+  {id:'k12', text:'フックの時に、反対の手のガードがちゃんとあるかどうか'},
+];
+
+const STORAGE_KEY = 'tb_progress_v2';
 function getProgress(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');}catch{return{};}}
 function saveProgress(d){localStorage.setItem(STORAGE_KEY,JSON.stringify(d));}
 
-function saveCheck(){
+function setStatus(group, id, val){
   const p = getProgress();
-  p.checks = {};
-  document.querySelectorAll('.checklist li').forEach(li=>{
-    p.checks[li.dataset.id] = li.classList.contains('checked');
-  });
+  p[group] = p[group] || {};
+  p[group][id] = val;
   saveProgress(p);
 }
 
-function loadCheck(){
+function getStatus(group, id){
   const p = getProgress();
-  if(!p.checks) return;
-  document.querySelectorAll('.checklist li').forEach(li=>{
-    if(p.checks[li.dataset.id]) li.classList.add('checked');
+  return (p[group] && p[group][id]) || null;
+}
+
+function calcScore(group, items){
+  const p = getProgress();
+  const data = p[group] || {};
+  let total = 0;
+  items.forEach(it=>{
+    const v = data[it.id];
+    if(v === 'o') total += 1;
+    else if(v === 't') total += 0.5;
   });
+  return Math.round((total / items.length) * 100);
 }
 
-function saveWatch(id, watched){
-  const p = getProgress();
-  p.watches = p.watches || {};
-  p.watches[id] = watched;
-  saveProgress(p);
+function updateCurrMeter(){
+  const score = calcScore('curr', CURRICULUM);
+  document.getElementById('curr-pct').textContent = score + '%';
+  document.getElementById('curr-fill').style.width = score + '%';
+  const status = document.getElementById('curr-status');
+  const text = document.getElementById('curr-status-text');
+  if(score >= 70){
+    status.className = 'meter-status ok';
+    status.textContent = '🎉 合格ライン突破！';
+    text.textContent = 'ホワイト帯昇格レベル';
+  }else{
+    status.className = 'meter-status ng';
+    status.textContent = `あと${70-score}%で合格！`;
+    text.textContent = '70%が合格ライン';
+  }
 }
 
-function loadWatch(){
-  const p = getProgress();
-  if(!p.watches) return;
-  document.querySelectorAll('[data-watch]').forEach(btn=>{
-    const id = btn.dataset.watch;
-    if(p.watches[id]){
-      if(btn.classList.contains('r') || btn.classList.contains('b') || btn.classList.contains('g')){
-        btn.classList.add('active');
-      }
-    }else{
-      if(!btn.classList.contains('r') && !btn.classList.contains('b') && !btn.classList.contains('g')){
-        btn.classList.add('active');
-      }
-    }
-  });
+function updateCheckMeter(){
+  const score = calcScore('check', CHECKS);
+  document.getElementById('check-pct').textContent = score + '%';
+  document.getElementById('check-fill').style.width = score + '%';
+  const status = document.getElementById('check-status');
+  const text = document.getElementById('check-status-text');
+  if(score >= 70){
+    status.className = 'meter-status ok';
+    status.textContent = '🎉 合格ライン突破！';
+    text.textContent = '基礎ができている状態';
+  }else{
+    status.className = 'meter-status ng';
+    status.textContent = `あと${70-score}%で合格！`;
+    text.textContent = '70%が合格ライン';
+  }
 }
 
-document.addEventListener('click', (e)=>{
-  const btn = e.target.closest('.vbtn');
-  if(!btn) return;
-  e.preventDefault();
-  e.stopPropagation();
-  const id = btn.dataset.watch;
-  const isWatched = btn.classList.contains('r') || btn.classList.contains('b') || btn.classList.contains('g');
-  saveWatch(id, isWatched);
-  document.querySelectorAll(`[data-watch="${id}"]`).forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-});
-
-/* ========== カリキュラム描画 ========== */
 function renderCurriculum(){
   const grid = document.getElementById('curr-grid');
-  grid.innerHTML = CURRICULUM.map(c=>`
-    <a href="${c.url}" target="_blank" class="curr-item">
-      <img src="https://img.youtube.com/vi/${c.vid}/mqdefault.jpg" alt="${c.name}" loading="lazy" onerror="this.style.background='#eee'">
-      <div class="curr-info">
-        <div class="curr-num">${c.num}</div>
-        <div class="curr-name">${c.name}</div>
+  grid.innerHTML = CURRICULUM.map(c=>{
+    const st = getStatus('curr', c.id);
+    return `<div class="curr-item">
+      <div class="curr-head">
+        <img src="https://img.youtube.com/vi/${c.vid}/mqdefault.jpg" alt="${c.name}" loading="lazy">
+        <div class="curr-info">
+          <div class="curr-num">${c.num}</div>
+          <div class="curr-name">${c.name}</div>
+          <a href="${c.url}" target="_blank" class="curr-link">▶ 動画を見る</a>
+        </div>
       </div>
-    </a>
-  `).join('');
+      <div class="curr-status">
+        <button class="cs-btn x ${st==='x'?'active':''}" data-curr="${c.id}" data-val="x">× 未着手</button>
+        <button class="cs-btn t ${st==='t'?'active':''}" data-curr="${c.id}" data-val="t">△ 挑戦中</button>
+        <button class="cs-btn o ${st==='o'?'active':''}" data-curr="${c.id}" data-val="o">○ できた</button>
+      </div>
+    </div>`;
+  }).join('');
 }
 
-/* ========== カテゴリ描画 ========== */
+function renderChecks(){
+  const list = document.getElementById('check-list');
+  list.innerHTML = CHECKS.map(c=>{
+    const st = getStatus('check', c.id);
+    return `<li>
+      <div class="cl-text">${c.text}</div>
+      <div class="cl-status">
+        <button class="cl-btn x ${st==='x'?'active':''}" data-check="${c.id}" data-val="x">×</button>
+        <button class="cl-btn t ${st==='t'?'active':''}" data-check="${c.id}" data-val="t">△</button>
+        <button class="cl-btn o ${st==='o'?'active':''}" data-check="${c.id}" data-val="o">○</button>
+      </div>
+    </li>`;
+  }).join('');
+}
+
 function renderCats(){
   const grid = document.getElementById('cat-grid');
   grid.innerHTML = CATS.map(c=>`
@@ -1030,19 +1123,72 @@ function renderCats(){
   `).join('');
 }
 
-/* ========== スクロールトップボタン ========== */
+document.addEventListener('click', (e)=>{
+  const cs = e.target.closest('.cs-btn');
+  if(cs){
+    e.preventDefault();
+    const id = cs.dataset.curr;
+    const val = cs.dataset.val;
+    setStatus('curr', id, val);
+    document.querySelectorAll(`.cs-btn[data-curr="${id}"]`).forEach(b=>b.classList.remove('active'));
+    cs.classList.add('active');
+    updateCurrMeter();
+    return;
+  }
+  const cl = e.target.closest('.cl-btn');
+  if(cl){
+    e.preventDefault();
+    const id = cl.dataset.check;
+    const val = cl.dataset.val;
+    setStatus('check', id, val);
+    document.querySelectorAll(`.cl-btn[data-check="${id}"]`).forEach(b=>b.classList.remove('active'));
+    cl.classList.add('active');
+    updateCheckMeter();
+    return;
+  }
+  const vb = e.target.closest('.vbtn');
+  if(vb){
+    e.preventDefault();
+    e.stopPropagation();
+    const id = vb.dataset.watch;
+    const baseId = id.replace(/_[xo]$/, '');
+    const isWatched = id.endsWith('_o');
+    setStatus('watch', baseId, isWatched ? 'o' : 'x');
+    document.querySelectorAll(`[data-watch^="${baseId}_"]`).forEach(b=>b.classList.remove('active'));
+    vb.classList.add('active');
+  }
+});
+
+function loadWatchStates(){
+  const p = getProgress();
+  const w = p.watch || {};
+  document.querySelectorAll('[data-watch]').forEach(btn=>{
+    const id = btn.dataset.watch;
+    const baseId = id.replace(/_[xo]$/, '');
+    const state = w[baseId];
+    if(!state){
+      if(id.endsWith('_x')) btn.classList.add('active');
+    }else if(state === 'o' && id.endsWith('_o')){
+      btn.classList.add('active');
+    }else if(state === 'x' && id.endsWith('_x')){
+      btn.classList.add('active');
+    }
+  });
+}
+
 window.addEventListener('scroll', ()=>{
   const btn = document.getElementById('scroll-top');
   if(window.scrollY > 400) btn.classList.add('show');
   else btn.classList.remove('show');
 }, {passive:true});
 
-/* ========== 初期化 ========== */
 window.addEventListener('DOMContentLoaded', ()=>{
   renderCurriculum();
+  renderChecks();
   renderCats();
-  loadCheck();
-  loadWatch();
+  updateCurrMeter();
+  updateCheckMeter();
+  loadWatchStates();
 });
 </script>
 </body>
