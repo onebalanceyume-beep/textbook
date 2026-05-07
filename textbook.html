@@ -209,7 +209,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 /* サービス案内 */
 .svc-card{background:white;border:1px solid #eee;border-radius:var(--r);padding:18px;margin-bottom:12px;}
 .svc-head{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
-.svc-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;}
+.svc-icon{width:54px;height:54px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:22px;overflow:hidden;}
+.svc-icon img{width:100%;height:100%;object-fit:contain;padding:4px;}
 .svc-name{font-size:15px;font-weight:700;color:var(--text);}
 .svc-tag{font-size:9px;background:var(--red-pale);color:var(--red);padding:2px 6px;border-radius:4px;font-weight:700;display:inline-block;margin-top:2px;}
 .svc-desc{font-size:13px;line-height:1.9;color:#444;margin-bottom:12px;}
@@ -834,7 +835,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 
   <div class="svc-card">
     <div class="svc-head">
-      <div class="svc-icon" style="background:var(--red-pale);">🥊</div>
+      <div class="svc-icon" style="background:white;border:1px solid #eee;"><img src="logo.jpg" alt="ONE-BALANCE" onerror="this.parentNode.innerHTML='🥊';this.parentNode.style.fontSize='22px';"></div>
       <div>
         <div class="svc-name">ワンバランスボクシングジム</div>
         <div class="svc-tag">ジム会員</div>
@@ -846,7 +847,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 
   <div class="svc-card">
     <div class="svc-head">
-      <div class="svc-icon" style="background:var(--blue-pale);">🎬</div>
+      <div class="svc-icon" style="background:white;border:1px solid #eee;"><img src="online-boxing-logo.jpg" alt="Online Boxing Academy" onerror="this.parentNode.innerHTML='🎬';this.parentNode.style.fontSize='22px';"></div>
       <div>
         <div class="svc-name">オンラインボクシングアカデミー</div>
         <div class="svc-tag">オンライン</div>
@@ -858,7 +859,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 
   <div class="svc-card">
     <div class="svc-head">
-      <div class="svc-icon" style="background:var(--red-pale);">💪</div>
+      <div class="svc-icon" style="background:white;border:1px solid #eee;"><img src="onetre-logo.png" alt="ONE-TRE" onerror="this.parentNode.innerHTML='💪';this.parentNode.style.fontSize='22px';"></div>
       <div>
         <div class="svc-name">ONE-TRE パーソナルトレーニング</div>
         <div class="svc-tag">マンツーマン</div>
@@ -882,7 +883,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
 
   <div class="svc-card">
     <div class="svc-head">
-      <div class="svc-icon" style="background:#fef9e7;">🤝</div>
+      <div class="svc-icon" style="background:white;border:1px solid #eee;"><img src="happykids-logo.png" alt="Happy Kids Project" onerror="this.parentNode.innerHTML='🤝';this.parentNode.style.fontSize='22px';"></div>
       <div>
         <div class="svc-name">児童養護施設 自立支援パートナーシップ</div>
         <div class="svc-tag">社会貢献</div>
@@ -901,7 +902,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:
       </div>
     </div>
     <div class="svc-price">月々 880円</div>
-    <div class="svc-desc">みんなが挑戦を応援するコミュニティ。代表が知っている情報をシェアしていきます。挑戦する人たちを応援できて、励まし合えるような環境を、Facebookを利用して作っています。</div>
+    <div class="svc-desc">みんなが挑戦を応援するコミュニティ。<strong>長尾が入手した成功する法則や本質的な考え方</strong>もここでシェアしていきます。挑戦する人たちを応援できて、励まし合えるような環境を、Facebookを利用して作っています。</div>
     <a href="#" target="_blank" class="svc-link" style="background:var(--gold);">詳しく見る →</a>
   </div>
 
